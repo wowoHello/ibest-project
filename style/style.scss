@@ -1,0 +1,135 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo 2", sans-serif;
+  }
+  
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+body {
+    overflow-x: hidden;    
+}
+/* header */
+header {
+    div.wrapMax {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        margin-left: auto;
+        margin-top: auto;
+        max-width: 100%;
+        height: 80px;
+        border-bottom:1px solid #ebebeb;
+        nav {            
+            div.logo {
+                flex-shrink: 0;
+                width: 187px;
+                p {
+                    display: block;                
+                    height: 36px;
+                    background-image: url(../images/logo.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    text-indent: -999px;
+                }
+            } 
+        }
+    }
+}
+/* main */
+main {
+
+    div {
+        position: flex;
+        div.leftBox {   /* left BOX */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            padding-top: 81px;
+            border-right: 1px solid #f1f1f1;
+            .fullImg {
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+        div.rightBox {  /* right BOX */
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            padding-top: 200px;
+            padding-left: 20px;
+            .btnClose {
+                position: fixed;
+                right: 0;
+                top: 80px;
+                width: 65px;
+                height: 65px;
+                background-color: #bb4b4b;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    transform: rotate(45deg);
+                    left: 50%;
+                    top: 50%;
+                    margin-left: -15px;
+                    margin-top: -1px;
+                    width: 30px;
+                    height: 2px;
+                    background-color: #ffffff;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    transform: rotate(-45deg);
+                    left: 50%;
+                    top: 50%;
+                    margin-left: -15px;
+                    margin-top: -1px;
+                    width: 30px;
+                    height: 2px;
+                    background-color: #ffffff;
+                }
+            }
+            div.titleBox {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 20px;
+                margin-bottom: 30px;
+                border-bottom: 2px solid #c02b2a;
+                h1.title {
+                    flex-grow: 1;
+                    font-weight: 400;
+                    font-size: 30px;
+                    letter-spacing: .02em;
+                    color: #242424;
+                }
+            }
+            ul.list {
+                list-style: none;
+                li {
+                    padding-bottom: 30px;
+                    margin-bottom: 30px;
+                    border-bottom: 1px solid #f1f1f1;
+                    div.item {
+                        div {
+                            &.titleContent {
+                            font-size: 14px;
+                            letter-spacing: .05em;
+                            line-height: 1.6;
+                            color: #818181;
+                            }
+                        }
+                    }
+                }
+            }           
+        }
+    }
+}
