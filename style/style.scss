@@ -118,13 +118,41 @@ main {
                     padding-bottom: 30px;
                     margin-bottom: 30px;
                     border-bottom: 1px solid #f1f1f1;
-                    div.item {
-                        div {
-                            &.titleContent {
+                    div.item {                        
+                        div.titleContent {
                             font-size: 14px;
                             letter-spacing: .05em;
                             line-height: 1.6;
+                            color: #818181;        
+                        }
+                        .itemTitle {
+                            display: flex;
+                            justify-content: space-between;
+                            div.title {
+                                position: relative;
+                                letter-spacing: .05em;
+                                font-size: 20px;
+                                font-weight: bold;
+                                padding-bottom: 20px;
+                                margin-bottom: 30px;
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 30px;
+                                    border-bottom: 2px solid #c02b2a;
+                                }
+                            } 
+                        }
+                        .itemContent {
+                            display: flex;
+                            flex-wrap: wrap;
+                            font-size: 14px;
+                            line-height: 1.6;
                             color: #818181;
+                            .tag {
+                                margin-right: 1rem;
                             }
                         }
                     }
